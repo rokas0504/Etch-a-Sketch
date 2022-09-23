@@ -1,0 +1,31 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gridContainer{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+
+}.box{
+    /* outline: 1px black solid; */
+    /* width: 25px;
+    height: 25px; */
+
+
+}
+.dimentions{
+    margin: 15px;
+    width: 200px;
+    height: 30px;
+
+}
