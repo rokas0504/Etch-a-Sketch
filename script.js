@@ -2,6 +2,12 @@ let gridContainer = document.querySelector(".gridContainer");
 let dimentionsButton = document.querySelector(".dimentions");
 dimentionsButton.addEventListener("click", ()=> getUserInput());
 let resetButton = document.querySelector(".reset");
+let greenButton = document.querySelector(".green");
+let redButton = document.querySelector(".red");
+let blueButton = document.querySelector(".blue");
+
+
+
 
 let X;
 getUserInput();
@@ -15,6 +21,9 @@ function getUserInput(){
     }
     else {
         createGrid(numberOfSquares);
+        // getColor(numberOfSquares);
+
+        
     }
 }
 
@@ -29,10 +38,13 @@ gridContainer.addEventListener("mouseup", function(){
 
 function createGrid (X){ // X - dimentions
     let dimentions = X*X;
+    let color = "black";
+    greenButton.addEventListener("click", function (){color = "green"});
+    redButton.addEventListener("click", function (){color = "red"});
+    blueButton.addEventListener("click", function () {color = "blue"});
+    console.log(color);
     
 
-
-    
     for(let i = 0; i<dimentions; i++ ){
 
         const oneBox = document.createElement("div");
@@ -42,8 +54,8 @@ function createGrid (X){ // X - dimentions
         gridContainer.appendChild(oneBox);
         oneBox.addEventListener("mouseover", function(){
             if(isMouseDown == true){
-                if( oneBox.style.backgroundColor != "black"){
-                    oneBox.style.backgroundColor = "black";
+                if( oneBox.style.backgroundColor != color){
+                    oneBox.style.backgroundColor = color;
                 }
             }
         });
@@ -56,4 +68,5 @@ function createGrid (X){ // X - dimentions
 
        
 }
+////////////////////////////////////////////////////
 

@@ -16,16 +16,34 @@ body {
     flex-wrap: wrap;
 
 
-}.box{
-    /* outline: 1px black solid; */
-    /* width: 25px;
-    height: 25px; */
-
-
 }
 .dimentions{
     margin: 15px;
     width: 200px;
     height: 30px;
 
+}
+.red{
+    height: 25px;
+    width: 30px;
+    background-color: red;
+    border-radius: 5px;
+}
+.green{
+    height: 25px;
+    width: 30px;
+    background-color: green;
+    border-radius: 5px;
+}
+.blue{
+    height: 25px;
+    width: 30px;
+    background-color: blue;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 15px;
 }
